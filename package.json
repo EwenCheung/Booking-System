@@ -1,0 +1,30 @@
+{
+  "name": "nus-reboks-booking-helper",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local Playwright helper for viewing and scheduling NUS REBOKS facility bookings.",
+  "bin": {
+    "reboks-booking": "./src/cli.js"
+  },
+  "scripts": {
+    "booking": "node ./src/cli.js",
+    "login": "node ./src/cli.js login",
+    "availability": "node ./src/cli.js availability",
+    "dashboard": "node ./src/server.js --open",
+    "dashboard:serve": "node ./src/server.js",
+    "scheduler": "node ./src/cli.js run-due",
+    "service:install": "node ./src/cli.js service install",
+    "service:uninstall": "node ./src/cli.js service uninstall",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "fetch-cookie": "^3.2.0",
+    "playwright": "1.63.0",
+    "tough-cookie": "^6.0.2"
+  }
+}
